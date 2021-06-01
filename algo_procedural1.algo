@@ -1,0 +1,32 @@
+PROCEDURE dot_product (v1, v2: ARRAY_OF FLOAT[10], VAR ps: FLOAT)
+VAR
+    i: INTEGER;
+    
+BEGIN
+    read(v1);
+    read(v2);
+    FOR i FROM 0 TO v1.length-1 STEP 1  DO
+        ps:= ps+v1[i]*v2[i];
+    END_FOR
+
+END
+
+ALGORITHM orthogonal_vectors
+VAR
+    ps: FLOAT;
+    i : INTEGER;
+BEGIN
+    read(n)
+    WHILE(i<= n) DO
+        read(v1)
+        read(v2)
+        dot_product(v1,v2,ps)
+        IF (ps=0) THEN
+            write("v1 and v2 are orthogonal")
+        ELSE
+            write(" v1 and v2 are not orthogonal")
+        END_IF
+
+    END_WHILE
+
+END
